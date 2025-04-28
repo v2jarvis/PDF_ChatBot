@@ -161,7 +161,7 @@ st.title("📝 Ask Questions to Your PDFs")
 
 # Sidebar - API key input
 # groq_api_key = st.sidebar.text_input("🔑 Groq API Key", type="password")
-groq_api_key = "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"
+groq_api_key = st.secrets["groq"]["api_key"]
 uploaded_files = st.file_uploader("📄 Upload PDF files", type=["pdf"], accept_multiple_files=True)
 
 if uploaded_files and groq_api_key:
